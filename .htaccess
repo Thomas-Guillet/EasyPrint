@@ -1,0 +1,13 @@
+Options -Indexes
+Options +FollowSymlinks
+RewriteEngine On
+
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^localhost$ [NC]
+RewriteCond %{HTTPS} on
+RewriteRule ^(.*)$ http://%{HTTP_HOST}/$1 [L,R]
+
+DirectoryIndex view/home.php
+RewriteRule ^b([0-9]+)/$ view/home.php [L]
+
+ErrorDocument 404 /view/error404.php

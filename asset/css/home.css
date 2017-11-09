@@ -1,0 +1,88 @@
+html, body{
+	height: 100%;
+}
+
+html::-webkit-scrollbar{
+	width: 0px;
+}
+
+#panel.slide{
+	position: absolute;
+    width: 100%;
+    height: 100%;
+    background: black;
+    top: 0;
+    left: 0;
+    z-index: 11;
+    overflow: hidden;
+}
+#panel.slide > .background{
+	position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 12;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+#panel.slide > .content{
+	position: absolute;
+    z-index: 13;
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 40px;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 60vh;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+}
+
+.block.home > .background{
+	position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 12;
+    background-color: black;
+    opacity: 0.75;
+}
+
+.block.home > .content{
+	text-align: center;
+	z-index: 13;
+	position: relative;
+}
+
+#panel.screenSpace{
+	height: 200%;
+}
+#panel.fixed{
+	position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #f1f1f1;
+    top: 0;
+    left: 0;
+    z-index: 1
+}
+#panel.fixed > .content{
+    top: 50%;
+    transform: translateY(-50%);
+    position: relative;
+}
+
+/* category */
+.category{
+	height: 30vh;
+	background-color: white;
+	width: 100%;
+	margin: 15px;
+}
+.category:hover{
+	cursor: pointer;
+}
