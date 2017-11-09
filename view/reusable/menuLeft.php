@@ -9,9 +9,9 @@
 <div id="menuLeft" class="menu left">
 	<div class="content">
 		<ul>
-			<li class="selected">HOME</li>
-			<li>CONTENT</li>
-			<li>ABOUT</li>
+			<li class="selected">Home</li>
+			<li>Content</li>
+			<li>About</li>
 		</ul>
 	</div>
 </div>

@@ -32,12 +32,14 @@ html::-webkit-scrollbar{
 	position: absolute;
     z-index: 13;
     color: white;
+    padding-bottom: 30px;
+    padding-top: 10px;
     font-family: 'Quicksand', sans-serif;
     font-size: 40px;
     top: 50%;
     left: 70%;
     width: 400px;
-    height: 60vh;
+    height: auto;
     transform: translate(-50%, -50%);
     overflow: hidden;
 }
@@ -57,6 +59,25 @@ html::-webkit-scrollbar{
     position: relative;
     color: black;
 }
+.block.home > .content > .signin {
+    font-size: 14px;
+    padding-top: 10px;
+}
+.block.home > .content > .signin > span {
+    color: #44b63d;
+    font-weight: bold;
+    /*text-decoration: underline;*/
+}
+.block.home > .content > .signin > span:hover {
+    cursor: pointer;
+}
+.block.home > .content > img{
+    width: 30%;
+}
+.block.home > .content > .title{
+    font-size: 30px;
+    margin-top: -10px;
+}
 .block.home > .content > form > input[type="text"]{
     line-height: 50px;
     width: 75%;
@@ -71,6 +92,7 @@ html::-webkit-scrollbar{
 }
 .block.home > .content > form > input[type="text"]:focus{
     outline: none;
+    background: white;
 }
 .block.home > .content > form > button{
     line-height: 50px;
@@ -86,6 +108,12 @@ html::-webkit-scrollbar{
 }
 .block.home > .content > form > button:focus{
     outline: none;
+}
+.block.home > .content > form > button:hover{
+    cursor: pointer;
+}
+.block.home > .content > form > button:active{
+    background: #44b63d;
 }
 
 #panel.screenSpace{

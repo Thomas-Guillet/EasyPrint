@@ -17,12 +17,20 @@ include_once HEADER;
 		<div class="block home">
 			<div class="background"></div>
 			<div class="content">
-				EasyPrint
+				<img src="<?= IMG ?>logo/logo.png">
+				<div class="title">
+					EasyPrint
+				</div>
 				<form>
 					<input type="text" placeholder="Your mail address" />
 					<input type="text" placeholder="Your password" />
 					<button type="button">SIGN UP</button>
+					<button type="button">login with Facebook</button>
+					<button type="button">login with Google</button>
 				</form>
+				<div class="signin">
+					already have an account ? <span>Sign in</span>
+				</div>
 			</div>
 		</div>
 	</div>
