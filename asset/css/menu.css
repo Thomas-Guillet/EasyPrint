@@ -8,6 +8,31 @@ header > .menu.left{
     background-image: linear-gradient(to right, white 50%, rgba(0, 128, 0, 0));
     display: none;
 }
+header > .menu.left > .content{
+	line-height: 60px;
+    position: relative;
+    color: black;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+header > .menu.left > .content > ul{
+	 list-style-type: none;
+}
+header > .menu.left > .content > ul > li:hover{
+	cursor: pointer;
+}
+header > .menu.left > .content > ul > li.selected:after{
+    content: '';
+    display: block;
+    width: 15px;
+    height: 2px;
+    background-color: black;
+    position: absolute;
+    top: 17%;
+    left: 18px;
+}
 @media (max-width: 767px) {
 	header > .menu.left{
 		z-index: 1000;
@@ -19,6 +44,8 @@ header > .menu.left{
 	    background-image: linear-gradient(to right, white 50%, rgba(0, 128, 0, 0));
 	}
 }
+
+
 header > .menu.fixed{
 	z-index: 10;
 	position: fixed;

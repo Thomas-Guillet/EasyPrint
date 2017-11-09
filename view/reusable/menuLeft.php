@@ -6,6 +6,12 @@
 	<div class="line three">
 	</div>
 </div>
-<div class="menu left">
-	
+<div id="menuLeft" class="menu left">
+	<div class="content">
+		<ul>
+			<li class="selected">HOME</li>
+			<li>CONTENT</li>
+			<li>ABOUT</li>
+		</ul>
+	</div>
 </div>

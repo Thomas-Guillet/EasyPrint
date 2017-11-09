@@ -7,5 +7,6 @@
 		<link rel="stylesheet" type="text/css" href="<?= BOOTSTRAP_CSS ?>bootstrap.min.css">
 
 		<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Barlow+Condensed" rel="stylesheet">
 	</head>
 	<body>

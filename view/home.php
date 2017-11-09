@@ -14,12 +14,17 @@ include_once HEADER;
 <div id="panel" class="slide">
 	<div class="background" style="background-image: url(<?= $sUrlBackground ?>)"></div>
 	<div class="content">
-		<!-- <div class="block home">
+		<div class="block home">
 			<div class="background"></div>
 			<div class="content">
 				EasyPrint
+				<form>
+					<input type="text" placeholder="Your mail address" />
+					<input type="text" placeholder="Your password" />
+					<button type="button">SIGN UP</button>
+				</form>
 			</div>
-		</div> -->
+		</div>
 	</div>
 </div>
 

@@ -35,13 +35,12 @@ html::-webkit-scrollbar{
     font-family: 'Quicksand', sans-serif;
     font-size: 40px;
     top: 50%;
-    left: 50%;
+    left: 70%;
     width: 400px;
     height: 60vh;
     transform: translate(-50%, -50%);
     overflow: hidden;
 }
-
 .block.home > .background{
 	position: absolute;
     width: 100%;
@@ -49,14 +48,44 @@ html::-webkit-scrollbar{
     top: 0;
     left: 0;
     z-index: 12;
-    background-color: black;
-    opacity: 0.75;
+    background-color: white;
+    /*opacity: 0.75;*/
 }
-
 .block.home > .content{
-	text-align: center;
-	z-index: 13;
-	position: relative;
+    text-align: center;
+    z-index: 13;
+    position: relative;
+    color: black;
+}
+.block.home > .content > form > input[type="text"]{
+    line-height: 50px;
+    width: 75%;
+    height: 50px;
+    border-radius: 0px;
+    border: 1px solid rgb(199, 199, 199);
+    background: #f1f1f1;
+    font-size: 14px;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+}
+.block.home > .content > form > input[type="text"]:focus{
+    outline: none;
+}
+.block.home > .content > form > button{
+    line-height: 50px;
+    width: 75%;
+    height: 50px;
+    border-radius: 0px;
+    border: 1px solid rgb(199, 199, 199);
+    background: #57cb50;
+    padding-left: 15px;
+    padding-right: 15px;
+    color: white;
+    font-size: 19px;
+}
+.block.home > .content > form > button:focus{
+    outline: none;
 }
 
 #panel.screenSpace{
