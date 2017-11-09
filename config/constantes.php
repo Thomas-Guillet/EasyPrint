@@ -15,6 +15,7 @@ define ('VIEW', ROOT.'view/');
 define ('HEADER', VIEW.'reusable/header.php');
 define ('FOOTER', VIEW.'reusable/footer.php');
 define ('FIXED_MENU', VIEW.'reusable/menuFixed.php');
+define ('LEFT_MENU', VIEW.'reusable/menuLeft.php');
 
 define ('ASSET', URL.'asset/');
 define ('CSS', ASSET.'css/');
@@ -23,6 +24,7 @@ define ('IMG', ASSET.'img/');
 
 define ('BOOTSTRAP_CSS', CSS.'bootstrap/');
 define ('BOOTSTRAP_JS', JS.'bootstrap/');
+define ('JQUERY', JS.'jquery/');
 
 define ('CATEGORY', VIEW.'reusable/category.php');
 ?>

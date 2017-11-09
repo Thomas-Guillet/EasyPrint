@@ -2,18 +2,24 @@
 include_once '../config/constantes.php';
 include_once CONTROLLER.'home.php';
 include_once HEADER;
-include_once FIXED_MENU;
 ?>
+
+<header>
+	<?php
+	include_once FIXED_MENU;
+	include_once LEFT_MENU;
+	?>
+</header>
 
 <div id="panel" class="slide">
 	<div class="background" style="background-image: url(<?= $sUrlBackground ?>)"></div>
 	<div class="content">
-		<div class="block home">
+		<!-- <div class="block home">
 			<div class="background"></div>
 			<div class="content">
 				EasyPrint
 			</div>
-		</div>
+		</div> -->
 	</div>
 </div>
 

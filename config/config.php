@@ -4,7 +4,7 @@
 
 if ($_SERVER['SERVER_NAME'] == 'localhost') {
 
-	$sRoot = 'C:/wamp64/www/print/';
+	$sRoot = 'C:/wamp64/www/EasyPrint/';
 	$sUrl = 'http://localhost/';
 	$sDossierLocal = 'EasyPrint/';
 
