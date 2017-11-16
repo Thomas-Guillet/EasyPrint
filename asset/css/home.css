@@ -7,7 +7,7 @@ html::-webkit-scrollbar{
 }
 
 #panel.slide{
-	position: absolute;
+    position: absolute;
     width: 100%;
     height: 100%;
     background: white;
@@ -15,6 +15,18 @@ html::-webkit-scrollbar{
     left: 0;
     z-index: 11;
     overflow: hidden;
+}
+#panel.slide::after{
+    width: 50px;
+    height: 50px;
+    z-index: 900000;
+    background-color: black;
+    position: fixed;
+    content: '';
+    display: block;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%)rotate(45deg);
 }
 #panel.slide > .background{
 	position: absolute;
@@ -78,7 +90,10 @@ html::-webkit-scrollbar{
     font-size: 30px;
     margin-top: -10px;
 }
-.block.home > .content > form > input[type="email"]{
+.block.home > .content > .title > span{
+    color: #57cb50;
+}
+.block.home > .content > #content-modal-sign-up > form > input{
     line-height: 50px;
     width: 75%;
     height: 50px;
@@ -90,27 +105,11 @@ html::-webkit-scrollbar{
     padding-right: 15px;
     text-align: center;
 }
-.block.home > .content > form > input[type="email"]:focus{
+.block.home > .content > #content-modal-sign-up > form > input:focus{
     outline: none;
     background: white;
 }
-.block.home > .content > form > input[type="password"]{
-    line-height: 50px;
-    width: 75%;
-    height: 50px;
-    border-radius: 0px;
-    border: 1px solid rgb(199, 199, 199);
-    background: #f1f1f1;
-    font-size: 14px;
-    padding-left: 15px;
-    padding-right: 15px;
-    text-align: center;
-}
-.block.home > .content > form > input[type="password"]:focus{
-    outline: none;
-    background: white;
-}
-.block.home > .content > form > button{
+.block.home > .content > #content-modal-sign-up > form > button{
     line-height: 50px;
     width: 75%;
     height: 50px;
@@ -122,16 +121,16 @@ html::-webkit-scrollbar{
     color: white;
     font-size: 19px;
 }
-.block.home > .content > form > button > i{
+.block.home > .content > #content-modal-sign-up > form > button > i{
     font-size: 25px;
 }
-.block.home > .content > form > button:focus{
+.block.home > .content > #content-modal-sign-up > form > button:focus{
     outline: none;
 }
-.block.home > .content > form > button:hover{
+.block.home > .content > #content-modal-sign-up > form > button:hover{
     cursor: pointer;
 }
-.block.home > .content > form > button:active{
+.block.home > .content > #content-modal-sign-up > form > button:active{
     background: #44b63d;
 }
 
@@ -142,7 +141,7 @@ html::-webkit-scrollbar{
 	position: fixed;
     width: 100%;
     height: 100%;
-    background: #f1f1f1;
+    background: white;
     top: 0;
     left: 0;
     z-index: 1
@@ -156,9 +155,9 @@ html::-webkit-scrollbar{
 /* category */
 .category{
 	height: 30vh;
-	background-color: white;
+	background-color: #f1f1f1;
 	width: 100%;
-	margin: 15px;
+	margin-top: 30px;
 }
 .category:hover{
 	cursor: pointer;

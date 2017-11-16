@@ -12,20 +12,20 @@ $(document).ready(function() {
 		var password = $('#user-password').val();
 
 		if(mail == null || mail == ''){
-			alert('mail');
+			toastr.error('Veuillez entrer un email');
 			$('#signin-email').html('SIGN UP');
 		}else if(!emailReg.test(mail)) {
-			alert('adresse type');
+			toastr.error('Cette adresse email n\'est pas valide');
 			$('#signin-email').html('SIGN UP');
 		}else{
 			stateMail = true;
 		}
 
 		if(password == null || password == ''){
-			alert('pass');
+			toastr.error('Veuillez entrer un mot de passe');
 			$('#signin-email').html('SIGN UP');
 		}else if(password.length < 5) {
-			alert('pass length');
+			toastr.error('Votre mot de passe doit contenir plus de 5 caractères');
 			$('#signin-email').html('SIGN UP');
 		}else{
 			statePassword = true;
@@ -43,7 +43,28 @@ $(document).ready(function() {
 				success: function(data) {
 					var result = $.parseJSON(data);
 					if(result['state'] == false){
-						$('#signin-email').html('SIGN UP');
+						if(result['err'] == 'mail'){
+							$('#signin-email').html('SIGN UP');
+							toastr.error('Cette adresse email est déjà utilisée');
+						}else{
+							$('#signin-email').html('SIGN UP');
+							toastr.error('Une erreur s\'produite, veuillez ré-essayer');
+						}
+					}else if(result['state'] == true){
+						sHtml = '';
+						sHtml += '<form>';
+						sHtml += '<input type="text" id="user-username" placeholder="Your username" />';
+						sHtml += '<input type="text" id="user-firstname" placeholder="Your firstname" />';
+						sHtml += '<input type="text" id="user-lastname" placeholder="Your lastname" />';
+						sHtml += '<button type="button" id="signup-account">CREATE ACCOUNT</button>';
+						sHtml += '</form>';
+
+						$('#content-modal-sign-up').hide(500);
+						setTimeout(function(){
+							$('#content-modal-sign-up').html(sHtml);
+						}, 500);
+							$('#content-modal-sign-up').show(500);
+
 					}
 				}
 			});
