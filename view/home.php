@@ -49,21 +49,21 @@ include_once HEADER;
 				<div class="col-sm-4">
 					<?php 
 						$sBackground = 'one'; 
-						$sTitle = 'Profil'; 
+						$sTitle = 'our Products'; 
 						include CATEGORY;
 					?>
 				</div>
 				<div class="col-sm-4">
 					<?php 
 						$sBackground = 'two'; 
-						$sTitle = 'Profil'; 
+						$sTitle = 'Upload Files'; 
 						include CATEGORY;
 					?>
 				</div>
 				<div class="col-sm-4">
 					<?php 
 						$sBackground = 'one'; 
-						$sTitle = 'Profil'; 
+						$sTitle = 'Quotation'; 
 						include CATEGORY;
 					?>				
 				</div>
@@ -72,14 +72,14 @@ include_once HEADER;
 				<div class="col-sm-4">
 					<?php 
 						$sBackground = 'two'; 
-						$sTitle = 'Profil'; 
+						$sTitle = 'My History'; 
 						include CATEGORY;
 					?>				
 				</div>
 				<div class="col-sm-4">
 					<?php 
 						$sBackground = 'one'; 
-						$sTitle = 'Profil'; 
+						$sTitle = 'Invite Friends'; 
 						include CATEGORY;
 					?>				
 				</div>

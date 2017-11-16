@@ -11,6 +11,17 @@ function getNbComptesByMail($sMail) {
 	return $query->fetch(PDO::FETCH_ASSOC);
 }
 
+//Récupérer un utilisateur par mai
+function getUserByEmail($sMail){
+	$query = getConnexion()->prepare(" SELECT *
+									   FROM user
+									   WHERE mail_user = :sMail
+	");
+	$query->bindParam(':sMail', $sMail, PDO::PARAM_STR);
+	$query->execute();
+	return $query->fetch(PDO::FETCH_ASSOC);
+}
+
 //Ajout d'un utilisateur
 function addUser($sUserMail, $sSecurePassword){
 	$query = getConnexion()->prepare(" INSERT INTO user (mail_user, password_user)
