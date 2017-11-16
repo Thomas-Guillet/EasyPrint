@@ -48,19 +48,22 @@ include_once HEADER;
 			<div class="row">
 				<div class="col-sm-4">
 					<?php 
-						$lol = 'loly'; 
+						$sBackground = 'one'; 
+						$sTitle = 'Profil'; 
 						include CATEGORY;
 					?>
 				</div>
 				<div class="col-sm-4">
 					<?php 
-						$lol = 'ahah'; 
+						$sBackground = 'two'; 
+						$sTitle = 'Profil'; 
 						include CATEGORY;
 					?>
 				</div>
 				<div class="col-sm-4">
 					<?php 
-						$lol = 'ahah'; 
+						$sBackground = 'one'; 
+						$sTitle = 'Profil'; 
 						include CATEGORY;
 					?>				
 				</div>
@@ -68,19 +71,22 @@ include_once HEADER;
 			<div class="row">
 				<div class="col-sm-4">
 					<?php 
-						$lol = 'ahah'; 
+						$sBackground = 'two'; 
+						$sTitle = 'Profil'; 
 						include CATEGORY;
 					?>				
 				</div>
 				<div class="col-sm-4">
 					<?php 
-						$lol = 'ahah'; 
+						$sBackground = 'one'; 
+						$sTitle = 'Profil'; 
 						include CATEGORY;
 					?>				
 				</div>
 				<div class="col-sm-4">
 					<?php 
-						$lol = 'ahah'; 
+						$sBackground = 'two'; 
+						$sTitle = 'Profil'; 
 						include CATEGORY;
 					?>				
 				</div>

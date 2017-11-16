@@ -154,11 +154,34 @@ html::-webkit-scrollbar{
 
 /* category */
 .category{
-	height: 30vh;
-	background-color: #f1f1f1;
-	width: 100%;
-	margin-top: 30px;
+    height: 30vh;
+    background-color: #f1f1f1;
+    width: 40vh;
+    margin-top: 30px;
+    transform: rotate(45deg);
+    line-height: 30vh;
+    text-align: center;
+    color: white;
+    font-size: 7vh;
+    position: relative;
+    -webkit-transition: .3s; /* Safari */
+    transition: .3s;
 }
-.category:hover{
-	cursor: pointer;
+.category.one{
+    background-color: rgb(170, 229, 167) !important;
+}
+.category.two{
+    background-color: rgb(127, 127, 127) !important;
+}
+.category.one:hover{
+    cursor: pointer;
+    background-color: #57cb50 !important;
+    transform: rotate(0deg);
+    z-index: 10;
+}
+.category.two:hover{
+    cursor: pointer;
+    background-color: black !important;
+    transform: rotate(0deg);
+    z-index: 10;
 }

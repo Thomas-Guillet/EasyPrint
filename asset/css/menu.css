@@ -59,7 +59,7 @@ header > .menu.fixed{
     height: 14vh;
     line-height: 12vh;
     padding: 16px;
-    background-color: white;
+    /*background-color: white;*/
     text-align: center;
     font-family: 'Quicksand', sans-serif;
 }
