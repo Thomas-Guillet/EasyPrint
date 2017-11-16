@@ -21,10 +21,14 @@ define ('ASSET', URL.'asset/');
 define ('CSS', ASSET.'css/');
 define ('JS', ASSET.'js/');
 define ('IMG', ASSET.'img/');
+define ('AJAX', ASSET.'js/ajax/');
 
 define ('BOOTSTRAP_CSS', CSS.'bootstrap/');
 define ('BOOTSTRAP_JS', JS.'bootstrap/');
 define ('JQUERY', JS.'jquery/');
 
 define ('CATEGORY', VIEW.'reusable/category.php');
+
+define ('SALT', 'new_york_queens');
+define ('SALT_POSITION', 3);
 ?>

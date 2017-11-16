@@ -5,4 +5,7 @@ $(document).ready(function() {
 		TweenMax.to($('#menuLeft'), 0, {x:-menuLeftWidth});
 		TweenMax.to($('#menuLeft'), .5, {x:0});
 	})
+	$('#burgerclose').click(() => {
+		TweenMax.to($('#menuLeft'), .5, {x:-menuLeftWidth});
+	})
 });

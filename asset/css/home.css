@@ -78,7 +78,7 @@ html::-webkit-scrollbar{
     font-size: 30px;
     margin-top: -10px;
 }
-.block.home > .content > form > input[type="text"]{
+.block.home > .content > form > input[type="email"]{
     line-height: 50px;
     width: 75%;
     height: 50px;
@@ -90,7 +90,23 @@ html::-webkit-scrollbar{
     padding-right: 15px;
     text-align: center;
 }
-.block.home > .content > form > input[type="text"]:focus{
+.block.home > .content > form > input[type="email"]:focus{
+    outline: none;
+    background: white;
+}
+.block.home > .content > form > input[type="password"]{
+    line-height: 50px;
+    width: 75%;
+    height: 50px;
+    border-radius: 0px;
+    border: 1px solid rgb(199, 199, 199);
+    background: #f1f1f1;
+    font-size: 14px;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+}
+.block.home > .content > form > input[type="password"]:focus{
     outline: none;
     background: white;
 }
@@ -105,6 +121,9 @@ html::-webkit-scrollbar{
     padding-right: 15px;
     color: white;
     font-size: 19px;
+}
+.block.home > .content > form > button > i{
+    font-size: 25px;
 }
 .block.home > .content > form > button:focus{
     outline: none;

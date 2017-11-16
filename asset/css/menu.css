@@ -3,7 +3,7 @@ header > .menu.left{
     position: absolute;
     top: 0;
     left: 0;
-    width: 50%;
+    width: 30%;
     height: 100%;
     background-image: linear-gradient(to right, white 50%, rgba(0, 128, 0, 0));
     display: none;
@@ -24,15 +24,18 @@ header > .menu.left > .content > ul{
 header > .menu.left > .content > ul > li:hover{
 	cursor: pointer;
 }
+header > .menu.left > .content > ul > li.selected{
+    font-weight: bold;
+}
 header > .menu.left > .content > ul > li.selected:after{
     content: '';
     display: block;
-    width: 15px;
-    height: 1px;
+    width: 30px;
+    height: 3px;
     background-color: black;
     position: absolute;
     top: 16%;
-    left: 18px;
+    left: 0px;
 }
 @media (max-width: 767px) {
 	header > .menu.left{
@@ -86,15 +89,31 @@ header > .menu.fixed{
 .burger.top.left > .line{
 	background: black;
     width: 100%;
-    height: 2px;
+    height: 1px;
     margin: 10px auto;
 }
-.burger.top.left > .line.one{
-	
+
+.burgerclose.top.left{
+	width: 35px;
+	height: 35px;
+    z-index: 15;
+    position: absolute;
+    top: 20px;
+    left: 20px;
 }
-.burger.top.left > .line.two{
-	
+.burgerclose.top.left:hover{
+	cursor: pointer;
 }
-.burger.top.left > .line.three{
-	
+.burgerclose.top.left > .line{
+	background: black;
+    margin-top: 15px;
+    width: 100%;
+    height: 1px;
+}
+.burgerclose.top.left > .line.one{
+	transform: rotate(45deg);
+}
+.burgerclose.top.left > .line.two{
+	transform: rotate(-45deg);
+    margin-top: -1px;
 }

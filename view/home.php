@@ -22,9 +22,9 @@ include_once HEADER;
 					EasyPrint
 				</div>
 				<form>
-					<input type="text" placeholder="Your mail address" />
-					<input type="text" placeholder="Your password" />
-					<button type="button">SIGN UP</button>
+					<input type="email" id="user-email" placeholder="Your mail address" />
+					<input type="password" id="user-password" placeholder="Your password" />
+					<button type="button" id="signin-email">SIGN UP</button>
 					<button type="button">login with Facebook</button>
 					<button type="button">login with Google</button>
 				</form>
