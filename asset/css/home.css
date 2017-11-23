@@ -164,6 +164,7 @@ html::-webkit-scrollbar{
     position: fixed;
     padding-top: 16vh;
     padding-bottom: 30px;
+    margin-left: 30px;
 }
 .panel-category::-webkit-scrollbar
 {
@@ -205,4 +206,49 @@ html::-webkit-scrollbar{
     background-color: black !important;
     transform: rotate(0deg);
     /*z-index: 10;*/
+}
+.panel-info{
+    margin-top: 20vh;
+    position: fixed;
+    margin-left: 32vh;
+}
+.panel-info > .title{
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+    font-size: 6vh;
+    background-color: #57cb50;
+    padding: 0 10px 0 10px;
+}
+.panel-info > .content-box{
+    width: 80%;
+    height: auto;
+    position: fixed;
+    margin-bottom: 30px;
+    overflow-x: auto;
+    display: flex;
+}
+/*.panel-info > .content-box::-webkit-scrollbar
+{
+    width: 2px;
+    height: 2px;
+}
+.panel-info > .content-box::-webkit-scrollbar-thumb
+{
+    background-color: #57cb50;
+}*/
+.panel-info > .content-box > .item > .header
+{
+    width: 200px;
+}
+.panel-info > .content-box > .item > .header
+{
+    color: black;
+    text-align: center;
+    background: black;
+    color: white;
+    font-weight: bold;
+    margin: 10px 10px 10px 0;
+    padding: 5px 0 5px 0;
+    font-family: 'Quicksand', sans-serif;
 }
