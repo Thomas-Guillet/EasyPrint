@@ -1,6 +1,7 @@
 
 
 <?php
+session_start;
 
 include_once '../../../config/constantes.php';
 include_once CONNEXION;

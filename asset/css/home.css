@@ -15,6 +15,8 @@ html::-webkit-scrollbar{
     left: 0;
     z-index: 11;
     overflow: hidden;
+    -webkit-clip-path: polygon(100% 0, 100% 100%, 53% 100%, 50% 95%, 47% 100%, 0 100%, 0 0);
+    clip-path: polygon(100% 0, 100% 100%, 53% 100%, 50% 95%, 47% 100%, 0 100%, 0 0);
 }
 #panel.slide::after{
     width: 50px;
@@ -39,6 +41,8 @@ html::-webkit-scrollbar{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    -webkit-clip-path: polygon(100% 0, 100% 100%, 53% 100%, 50% 95%, 47% 100%, 0 100%, 0 0);
+    clip-path: polygon(100% 0, 100% 100%, 53% 100%, 50% 95%, 47% 100%, 0 100%, 0 0);
 }
 #panel.slide > .content{
 	position: absolute;
@@ -147,21 +151,38 @@ html::-webkit-scrollbar{
     z-index: 1
 }
 #panel.fixed > .content{
-    top: 50%;
-    transform: translateY(-50%);
+    /*top: 50%;*/
+    /*transform: translateY(-50%);*/
     position: relative;
 }
 
 /* category */
+.panel-category{
+    height: 100%;
+    overflow-y: scroll;
+    width: 24vh;
+    position: fixed;
+    padding-top: 16vh;
+    padding-bottom: 30px;
+}
+.panel-category::-webkit-scrollbar
+{
+    width: 2px;
+}
+.panel-category::-webkit-scrollbar-thumb
+{
+    background-color: #57cb50;
+}
+
 .category{
-    height: 30vh;
+    height: 20vh;
     background-color: #f1f1f1;
-    width: 100%;
+    width: 20vh;
     margin-top: 30px;
-    line-height: 30vh;
+    line-height: 20vh;
     text-align: center;
     color: white;
-    font-size: 5vh;
+    font-size: 2vh;
     position: relative;
     -webkit-transition: .3s;
     transition: .3s;

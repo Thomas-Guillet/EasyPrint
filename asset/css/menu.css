@@ -56,10 +56,10 @@ header > .menu.fixed{
     top: 0;
     left: 0;
     width: 100%;
-    height: 14vh;
+    height: 16vh;
     line-height: 12vh;
     padding: 16px;
-    /*background-color: white;*/
+    background-color: rgba(255,255,255,0.8);
     text-align: center;
     font-family: 'Quicksand', sans-serif;
 }

@@ -45,52 +45,38 @@ include_once HEADER;
 <div id="panel" class="fixed">
 	<div class="content">
 		<div class="container">
-			<div class="row">
-				<div class="col-sm-4">
+			<div class="panel-category">
 					<?php 
 						$sBackground = 'one'; 
 						$sTitle = 'our Products'; 
 						include CATEGORY;
 					?>
-				</div>
-				<div class="col-sm-4">
 					<?php 
 						$sBackground = 'two'; 
 						$sTitle = 'Upload Files'; 
 						include CATEGORY;
 					?>
-				</div>
-				<div class="col-sm-4">
 					<?php 
 						$sBackground = 'one'; 
 						$sTitle = 'Quotation'; 
 						include CATEGORY;
 					?>				
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-sm-4">
 					<?php 
 						$sBackground = 'two'; 
 						$sTitle = 'My History'; 
 						include CATEGORY;
 					?>				
-				</div>
-				<div class="col-sm-4">
 					<?php 
 						$sBackground = 'one'; 
 						$sTitle = 'Invite Friends'; 
 						include CATEGORY;
 					?>				
-				</div>
-				<div class="col-sm-4">
 					<?php 
 						$sBackground = 'two'; 
 						$sTitle = 'Profil'; 
 						include CATEGORY;
-					?>				
-				</div>
-			</div>
+					?>	
+					</div>			
 		</div>
 	</div>
 </div>
