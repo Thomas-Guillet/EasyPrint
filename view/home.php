@@ -44,70 +44,28 @@ include_once HEADER;
 
 <div id="panel" class="fixed">
 	<div class="content">
-		<div class="panel-category">
-			<?php 
-				$sBackground = 'one'; 
-				$sTitle = 'our Products'; 
-				include CATEGORY;
-			?>
-			<?php 
-				$sBackground = 'two'; 
-				$sTitle = 'Upload Files'; 
-				include CATEGORY;
-			?>
-			<?php 
-				$sBackground = 'one'; 
-				$sTitle = 'Quotation'; 
-				include CATEGORY;
-			?>				
-			<?php 
-				$sBackground = 'two'; 
-				$sTitle = 'My History'; 
-				include CATEGORY;
-			?>				
-			<?php 
-				$sBackground = 'one'; 
-				$sTitle = 'Invite Friends'; 
-				include CATEGORY;
-			?>				
-			<?php 
-				$sBackground = 'two'; 
-				$sTitle = 'Profil'; 
-				include CATEGORY;
-				?>	
-		</div>	
+		<?php include_once CATEGORIES_MENU; ?>
 		<div class="panel-info">
 			<div class="title">
 				Our Products
 			</div>
 			<div class="content-box">
-				<div class="item">
-					<div class="header">
-						Cartes de Visite
+				<?php foreach ($aTypeArticles as $key => $aArticle) { ?>
+					<?php if($aArticle['nb_items'] != 0){ ?>
+					<div class="item">
+						<div class="header">
+							<?= $aArticle['label'] ?>
+						</div>
+						<ul>
+							<?php foreach ($aArticle['content'] as $aValue) { ?>
+								<li>
+									<a href="<?= URL.'search/'.$aArticle['url'].'/'.$aValue['url'] ?>"><?= $aValue['label'] ?></a>
+								</li>
+							<?php } ?>
+						</ul>
 					</div>
-					<ul>
-						<li>
-							Item 1
-						</li>
-						<li>
-							Item 1
-						</li>
-					</ul>
-				</div>
-
-				<div class="item">
-					<div class="header">
-						Coques de téléphone
-					</div>
-					<ul>
-						<li>
-							Item 1
-						</li>
-						<li>
-							Item 1
-						</li>
-					</ul>
-				</div>
+					<?php } ?>
+				<?php } ?>
 			</div>
 		</div>		
 	</div>

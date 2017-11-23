@@ -1,8 +1,10 @@
 <div class="menu fixed">
-	<img src="<?= IMG ?>logo/logo.png">
-	<div class="title">
-		<span>Easy</span>Print
-	</div>
+	<a href="<?= URL ?>">
+		<img src="<?= IMG ?>logo/logo.png">
+		<div class="title">
+			<span>Easy</span>Print
+		</div>
+	</a>
 	<div class="profil">
 	</div>
 	<div class="name">

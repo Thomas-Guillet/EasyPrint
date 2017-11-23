@@ -9,5 +9,10 @@ RewriteRule ^(.*)$ http://%{HTTP_HOST}/$1 [L,R]
 
 DirectoryIndex view/home.php
 RewriteRule ^b([0-9]+)/$ view/home.php [L]
+RewriteRule ^search$  view/home.php [NC,L]
+
+RewriteRule ^search/(.*)$  view/article.php?data=$1 [NC,L,QSA]
 
 ErrorDocument 404 /view/error404.php
+
+

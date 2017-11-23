@@ -16,6 +16,7 @@ define ('HEADER', VIEW.'reusable/header.php');
 define ('FOOTER', VIEW.'reusable/footer.php');
 define ('FIXED_MENU', VIEW.'reusable/menuFixed.php');
 define ('LEFT_MENU', VIEW.'reusable/menuLeft.php');
+define ('CATEGORIES_MENU', VIEW.'reusable/menuCategories.php');
 
 define ('ASSET', URL.'asset/');
 define ('CSS', ASSET.'css/');

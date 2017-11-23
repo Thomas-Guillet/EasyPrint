@@ -156,57 +156,6 @@ html::-webkit-scrollbar{
     position: relative;
 }
 
-/* category */
-.panel-category{
-    height: 100%;
-    overflow-y: scroll;
-    width: 24vh;
-    position: fixed;
-    padding-top: 16vh;
-    padding-bottom: 30px;
-    margin-left: 30px;
-}
-.panel-category::-webkit-scrollbar
-{
-    width: 2px;
-}
-.panel-category::-webkit-scrollbar-thumb
-{
-    background-color: #57cb50;
-}
-
-.category{
-    height: 20vh;
-    background-color: #f1f1f1;
-    width: 20vh;
-    margin-top: 30px;
-    line-height: 20vh;
-    text-align: center;
-    color: white;
-    font-size: 2vh;
-    position: relative;
-    -webkit-transition: .3s;
-    transition: .3s;
-    font-family: 'Quicksand', sans-serif;
-}
-.category.one{
-    background-color: rgb(170, 229, 167) !important;
-}
-.category.two{
-    background-color: rgb(127, 127, 127) !important;
-}
-.category.one:hover{
-    cursor: pointer;
-    background-color: #57cb50 !important;
-    transform: rotate(0deg);
-    /*z-index: 10;*/
-}
-.category.two:hover{
-    cursor: pointer;
-    background-color: black !important;
-    transform: rotate(0deg);
-    /*z-index: 10;*/
-}
 .panel-info{
     margin-top: 20vh;
     position: fixed;
@@ -221,12 +170,14 @@ html::-webkit-scrollbar{
     padding: 0 10px 0 10px;
 }
 .panel-info > .content-box{
+    border-top: solid 3px #57cb50;
     width: 80%;
-    height: auto;
+    height: 60vh;
     position: fixed;
-    margin-bottom: 30px;
+    padding-bottom: 30px;
     overflow-x: auto;
     display: flex;
+    overflow-y: auto;
 }
 /*.panel-info > .content-box::-webkit-scrollbar
 {
@@ -237,9 +188,10 @@ html::-webkit-scrollbar{
 {
     background-color: #57cb50;
 }*/
-.panel-info > .content-box > .item > .header
+.panel-info > .content-box > .item
 {
     width: 200px;
+    padding-right: 10px;
 }
 .panel-info > .content-box > .item > .header
 {
@@ -248,7 +200,7 @@ html::-webkit-scrollbar{
     background: black;
     color: white;
     font-weight: bold;
-    margin: 10px 10px 10px 0;
+    margin: 10px 0 10px 0;
     padding: 5px 0 5px 0;
     font-family: 'Quicksand', sans-serif;
 }
