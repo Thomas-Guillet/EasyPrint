@@ -14,22 +14,33 @@ include_once HEADER;
 			<div class="title">
 				<?= $aTypeArticle['label'] ?>
 			</div>
-			<div class="content-box">
-				<!-- <?php foreach ($aTypeArticles as $key => $aArticle) { ?>
-					<?php if($aArticle['nb_items'] != 0){ ?>
-					<div class="item">
-						<div class="header">
-							<?= $aArticle['label'] ?>
-						</div>
-						<ul>
-							<?php foreach ($aArticle['content'] as $aValue) { ?>
-								<li>
-									<a href="<?= URL.'search/'.$aArticle['url'].'/'.$aValue['url'] ?>"><?= $aValue['label'] ?></a>
-								</li>
-							<?php } ?>
-						</ul>
+			<div class="content-box" style="overflow-x: hidden">
+				<div class="article">
+					<div class="picture-panel" style="background-image: url(https://www.copytop.com/sites/all/images/creation-carte-2.jpg);">
 					</div>
-					<?php } ?>
-				<?php } ?> -->
+					<div class="description-panel">
+					</div>
+					<div class="price-panel">
+						<div class="row">
+							<div class="col-sm-3 price">
+								9,99€
+							</div>
+							<div class="col-sm-5">
+								<div class="quantity">
+								<input type="number" min="0" pattern="\d*" step="1" value="1" />
+								</div>
+							</div>
+							<div class="col-sm-4">
+								Ajout
+							</div>
+						</div>
+					</div>
+					<div class="advice-panel">
+					</div>
+				</div>
 			</div>
 		</div>
+
+<?php
+include_once FOOTER;
+?>

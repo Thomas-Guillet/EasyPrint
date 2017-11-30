@@ -172,11 +172,12 @@ html::-webkit-scrollbar{
 .panel-info > .content-box{
     border-top: solid 3px #57cb50;
     width: 80%;
-    height: 60vh;
+    height: 65vh;
     position: fixed;
     padding-bottom: 30px;
     overflow-x: auto;
     display: flex;
+    text-align: center;
     overflow-y: auto;
 }
 /*.panel-info > .content-box::-webkit-scrollbar
