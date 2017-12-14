@@ -7,36 +7,44 @@ include_once HEADER;
 <header>
 	<?php
 	include_once FIXED_MENU;
-	include_once LEFT_MENU;
+	if(!$bConnexion){
+		include_once LEFT_MENU;
+	}
 	?>
 </header>
 
-<div id="panel" class="slide">
-	<div class="background" style="background-image: url(<?= $sUrlBackground ?>)"></div>
-	<div class="content">
-		<div class="block home">
-			<div class="background"></div>
-			<div class="content">
-				<img src="<?= IMG ?>logo/logo.png">
-				<div class="title">
-					<span>Easy</span>Print
-				</div>
-				<div id="content-modal-sign-up">
-					<form>
-						<input type="email" id="user-email" placeholder="Your mail address" />
-						<input type="password" id="user-password" placeholder="Your password" />
-						<button type="button" id="signin-email">SIGN UP</button>
-						<button type="button">login with Facebook</button>
-						<button type="button">login with Google</button>
-					</form>
-				</div>
-				<div class="signin">
-					already have an account ? <span>Sign in</span>
+<?php
+if(!$bConnexion){
+?>
+	<div id="panel" class="slide">
+		<div class="background" style="background-image: url(<?= $sUrlBackground ?>)"></div>
+		<div class="content">
+			<div class="block home">
+				<div class="background"></div>
+				<div class="content">
+					<img src="<?= IMG ?>logo/logo.png">
+					<div class="title">
+						<span>Easy</span>Print
+					</div>
+					<div id="content-modal-sign-up">
+						<form>
+							<input type="email" id="user-email" placeholder="Your mail address" />
+							<input type="password" id="user-password" placeholder="Your password" />
+							<button type="button" id="signin-email">SIGN UP</button>
+							<!-- <button type="button">login with Facebook</button> -->
+							<!-- <button type="button">login with Google</button> -->
+						</form>
+					</div>
+					<!-- <div class="signin">
+						already have an account ? <span>Sign in</span>
+					</div> -->
 				</div>
 			</div>
 		</div>
 	</div>
-</div>
+<?php
+}
+?>
 
 <div id="panel" class="screenSpace">
 

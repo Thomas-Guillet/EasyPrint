@@ -23,4 +23,10 @@ foreach ($aListCategories as $aCategory) {
 	$aTypeArticles[$iIdCategory]['content'] = getTypeArticleByCategoryId($iIdCategory);
 	$aTypeArticles[$iIdCategory]['nb_items'] = count($aTypeArticles[$iIdCategory]['content']);
 }
+
+$bConnexion = false;
+var_dump($_SESSION['mail']);
+if($_SESSION['connexion']){
+	$bConnexion = true;
+}
 ?>

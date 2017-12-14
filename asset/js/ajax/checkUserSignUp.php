@@ -18,9 +18,10 @@ $aData = array();
 if($iNbCompte == 0){
 	addUser($sUserMail, $sSecurePassword);
 	$aData['state'] = true;
+	$aData['session'] = 'new';
 }else{
-	$aData['state'] = false;
-	$aData['err'] = 'mail';
+	$aData['state'] = true;
+	$aData['session'] = $sUserMail;
 }
 $aData['mail'] = $sUserMail;
 $sData = json_encode($aData);

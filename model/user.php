@@ -22,6 +22,19 @@ function getUserByEmail($sMail){
 	return $query->fetch(PDO::FETCH_ASSOC);
 }
 
+//Modification des nom de l'utilisateur
+function updateUserNames($sUsermail, $sUsername, $sFirstname, $sLastName) {
+	$query = getConnexion()->prepare(" UPDATE user
+									   SET username_user = :sUsername, firstname_user = :sFirstname, lastname_user = :sLastname
+									   WHERE mail_user = :sUsermail
+	");
+	$query->bindParam(':sUsername', $sUsername, PDO::PARAM_STR);
+	$query->bindParam(':sFirstname', $sFirstname, PDO::PARAM_STR);
+	$query->bindParam(':sLastname', $sLastName, PDO::PARAM_STR);
+	$query->bindParam(':sUsermail', $sUsermail, PDO::PARAM_STR);
+	$query->execute();
+}
+
 //Ajout d'un utilisateur
 function addUser($sUserMail, $sSecurePassword){
 	$query = getConnexion()->prepare(" INSERT INTO user (mail_user, password_user)

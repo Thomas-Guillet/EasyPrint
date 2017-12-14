@@ -1,11 +1,13 @@
 <?php
 if(isset($sTitle)){
-	if($sTitle == "profil"){
-
+	if($sTitle == "our Products"){
+		$sUrl = URL;
+	}else{
+		$sUrl = false;
 	}
 }
 ?>
 
-<div class="category <?= $sBackground ?>">
+<div onclick="location.href='<?= $sUrl ?>'" class="category <?= $sBackground ?>">
 	<?= $sTitle ?>
 </div>

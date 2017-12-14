@@ -195,11 +195,11 @@ header > .menu.fixed{
 }
 
 .category{
-    height: 20vh;
+    height: 7vh;
     background-color: #f1f1f1;
     width: 20vh;
-    margin-top: 30px;
-    line-height: 20vh;
+    margin-top: 5vh;
+    line-height: 7vh;
     text-align: center;
     color: white;
     font-size: 2vh;
@@ -209,20 +209,20 @@ header > .menu.fixed{
     font-family: 'Quicksand', sans-serif;
 }
 .category.one{
-    background-color: rgb(170, 229, 167) !important;
+    background-color: #57cb50 !important;
 }
 .category.two{
-    background-color: rgb(127, 127, 127) !important;
+    background-color: black !important;
 }
 .category.one:hover{
     cursor: pointer;
-    background-color: #57cb50 !important;
+    background-color: rgb(170, 229, 167) !important;
     transform: rotate(0deg);
     /*z-index: 10;*/
 }
 .category.two:hover{
     cursor: pointer;
-    background-color: black !important;
+    background-color: rgb(127, 127, 127) !important;
     transform: rotate(0deg);
     /*z-index: 10;*/
 }

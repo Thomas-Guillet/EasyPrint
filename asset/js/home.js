@@ -1,4 +1,5 @@
 $(document).ready(function() {
+
 	$('#signin-email').click(() => {
 
 		$('#signin-email').html('<i class="fa fa-circle-o-notch fa-spin fa-3x fa-fw"></i><span class="sr-only">Loading...</span>');
@@ -43,35 +44,88 @@ $(document).ready(function() {
 				success: function(data) {
 					var result = $.parseJSON(data);
 					if(result['state'] == false){
-						if(result['err'] == 'mail'){
-							$('#signin-email').html('SIGN UP');
-							toastr.error('Cette adresse email est déjà utilisée');
-						}else{
-							$('#signin-email').html('SIGN UP');
-							toastr.error('Une erreur s\'produite, veuillez ré-essayer');
-						}
+						$('#signin-email').html('SIGN UP');
+						toastr.error('Une erreur s\'produite, veuillez ré-essayer');
 					}else if(result['state'] == true){
-						sHtml = '';
-						sHtml += '<form>';
-						sHtml += '<input type="text" id="user-username" placeholder="Your username" />';
-						sHtml += '<input type="text" id="user-firstname" placeholder="Your firstname" />';
-						sHtml += '<input type="text" id="user-lastname" placeholder="Your lastname" />';
-						sHtml += '<button type="button" id="signup-account">CREATE ACCOUNT</button>';
-						sHtml += '</form>';
+						if(result['session'] == 'new'){
+							sHtml = '';
+							sHtml += '<form>';
+							sHtml += '<input type="text" id="user-username" placeholder="Your username" />';
+							sHtml += '<input type="text" id="user-firstname" placeholder="Your firstname" />';
+							sHtml += '<input type="text" id="user-lastname" placeholder="Your lastname" />';
+							sHtml += '<button type="button" id="signup-account">CREATE ACCOUNT</button>';
+							sHtml += '</form>';
+							
+							$('#content-modal-sign-up').hide(500);
+							setTimeout(function(){
+								$('#content-modal-sign-up').html(sHtml);
 
-						$('#content-modal-sign-up').hide(500);
-						setTimeout(function(){
-							$('#content-modal-sign-up').html(sHtml);
-						}, 500);
+								$('#signup-account').click(() => {
+									stateSignUp = true;
+									var sUserMail = result['mail'];
+									var sUsername = $('#user-username').val();
+									var sFirstname = $('#user-firstname').val();
+									var sLastname = $('#user-lastname').val();
+									if(sUsername == null || sUsername == ''){
+										toastr.error('Veuillez entrer un Username');
+										stateSignUp = false;
+									}
+									if(sFirstname == null || sFirstname == ''){
+										toastr.error('Veuillez entrer un Firstname');
+										stateSignUp = false;
+									}
+									if(sLastname == null || sLastname == ''){
+										toastr.error('Veuillez entrer un Lastname');
+										stateSignUp = false;
+									}
+
+									if(stateSignUp){
+									$('#signup-account').html('<i class="fa fa-circle-o-notch fa-spin fa-3x fa-fw"></i><span class="sr-only">Loading...</span>');
+										var dataObject = {
+											sUsername: sUsername,
+											sFirstname: sFirstname,
+											sLastname: sLastname,
+											sUserMail: sUserMail,
+										};
+										$.ajax({
+											method: 'post',
+											url: $('#ajax').val()+'checkUserInformation.php',
+											data : dataObject,
+											success: function(data) {
+												if(data == 'success'){
+													location.reload();
+												}else{
+													$('#signup-account').html('CREATE ACCOUNT');
+												}
+											}
+										});
+									}
+								});
+							}, 500);
 							$('#content-modal-sign-up').show(500);
-
+						}else{
+							var dataObject = {
+								mail: mail,
+								password: password,
+							};
+							$.ajax({
+								method: 'post',
+								url: $('#ajax').val()+'checkUserPassword.php',
+								data : dataObject,
+								success: function(data) {
+									console.log(data);
+									if(data == true){
+										location.reload();
+									}else{
+										toastr.error('Wrong password');
+										$('#signin-email').html('SIGN UP');
+									}
+								}
+							});
+						}
 					}
 				}
 			});
 		}
-
-
-
-
 	});
 });

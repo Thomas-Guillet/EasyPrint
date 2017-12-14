@@ -30,8 +30,5 @@ $(document).ready(function() {
         spinner.find("input").val(newVal);
         spinner.find("input").trigger("change");
       });
-
     });
-
-
 });

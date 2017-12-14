@@ -1,8 +1,6 @@
 
 
 <?php
-session_start;
-
 include_once '../../../config/constantes.php';
 include_once CONNEXION;
 include_once MODEL.'user.php';
@@ -16,17 +14,20 @@ $aUser = getUserByEmail($sUserMail);
 //Secure password
 $aData = array();
 $sSaltedPassword = substr($sUserPassword, 0, SALT_POSITION) . SALT . substr($sUserPassword, SALT_POSITION);
-if (password_verify($sSaltedPassword, $aUser['user_password'])) {
-    $sData['statut'] = true;
+if (password_verify($sSaltedPassword, $aUser['password_user'])) {
+    $sData = true;
 } else {
-    $sData['statut'] = false;
+    $sData = false;
 }
 
-$_SESSION['mail']
-$_SESSION['username']
-$_SESSION['firstname']
-$_SESSION['lastname']
-$_SESSION['type_user']
+if($sData){
+	session_start();
+	$_SESSION['connexion'] = true;
+	$_SESSION['mail'] = $sUserMail;
+	$_SESSION['username'] = $aUser['username_user'];
+	$_SESSION['firstname'] = $aUser['firstname_user'];
+	$_SESSION['lastname'] = $aUser['lastname_user'];
+	$_SESSION['type_user'] = $aUser['id_user_type'];
+}
 
-
-echo $sData;
+print_r($sData);
