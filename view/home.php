@@ -6,9 +6,11 @@ include_once HEADER;
 
 <header>
 	<?php
-	include_once FIXED_MENU;
 	if(!$bConnexion){
+		include_once FIXED_MENU;
 		include_once LEFT_MENU;
+	}else{
+		include_once FIXED_MENU_CONNECTED;
 	}
 	?>
 </header>

@@ -113,9 +113,11 @@ $(document).ready(function() {
 								url: $('#ajax').val()+'checkUserPassword.php',
 								data : dataObject,
 								success: function(data) {
-									console.log(data);
 									if(data == true){
-										location.reload();
+										toastr.success('Connecté');
+										setTimeout(function(){
+											location.reload();
+										}, 1500);
 									}else{
 										toastr.error('Wrong password');
 										$('#signin-email').html('SIGN UP');

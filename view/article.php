@@ -6,7 +6,11 @@ include_once HEADER;
 
 <header>
 	<?php
-	include_once FIXED_MENU;
+	if(!$bConnexion){
+		include_once FIXED_MENU;
+	}else{
+		include_once FIXED_MENU_CONNECTED;
+	}
 	?>
 </header>
 	<?php include_once CATEGORIES_MENU; ?>

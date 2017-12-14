@@ -25,7 +25,6 @@ foreach ($aListCategories as $aCategory) {
 }
 
 $bConnexion = false;
-var_dump($_SESSION['mail']);
 if($_SESSION['connexion']){
 	$bConnexion = true;
 }
